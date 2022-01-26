@@ -84,7 +84,7 @@ familia2['Animais'] = {'Cachorro','Gatos','Peixe'}
 #######################################
 # Revisão Funçoes
 #######################################
-
+"""
 def um ():
     x = 1
     print(x)
@@ -95,6 +95,8 @@ def dois (y):
     print(y)
     y = 2
     print(y)
+"""
+
     
 
 
