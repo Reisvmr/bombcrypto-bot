@@ -4,7 +4,7 @@ save_data_on_exit = True
 save_history = True
 save_non_project_files = False
 project_type = 'empty-project-type'
-recent_files = ['TELEGRAM-BOT\\Revisao.py', 'TELEGRAM-BOT\\EstudoPoo.py']
+recent_files = ['\\\\vboxsvr\\dados\\github.com\\bombcrypto-bot\\BOMB-TELEGRAM\\TELEGRAM-BOT\\EstudoJsonBITCOIN.py']
 
 [main]
 version = 0.2.0
