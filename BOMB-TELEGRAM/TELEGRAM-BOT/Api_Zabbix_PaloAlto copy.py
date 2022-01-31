@@ -23,24 +23,22 @@ chave = 'LUFRPT1idTV0YWlYbHd5ekozRjNOeE1kVnBHbC9lNUE9eTlGWXNncjJSekRpWE1MZ3hHcDV
 categoriaurl = 'https://10.32.208.101/api/?type=report&async=yes&reporttype=predefined&reportname=top-url-categories&'
 type = 'op'
 query = '<show><global-protect-portal><current-user><portal>GP-DECEA</portal></current-user></global-protect-portal></show>'
+vpn_user = '<show><global-protect-gateway><current-user><gateway>GP-GATEWAY</gateway></current-user></global-protect-gateway></show>'
 #Payload contem todos os parametros que seram utilizados no post em forma de dicionario
 
-#'key' : chave}
-#
-#
-#xml para a variavel response
-#requests.get(categoriaurl, params=payload, verify=False)
-#resultado xml to dict
-#odict.parse(response.text)
-#esultado para json
-#dumps(xpars)
-#resultado
-#
+#Payload contem todos os parametros que seram utilizados no post em forma de dicionario
+payload = { 'key' : chave, 'type' : type, 'cmd' : vpn_user}
+#Carregando xml para a variavel response
+response = requests.get(categoriaurl, params=payload, verify=False)
+#Converter resultado xml to dict
+xpars = xmltodict.parse(response.text)
+#Converter resultado para json
+json = json.dumps(xpars)
+#Imprimindo resultado
+print (json)
 
-def get_resquest(type=type,cmd=query,key=chave)
-    url_base = f'https://10.32.208.101/api/?type={type}&cmd={cmd}&key={key}'
-    r = requests.get(url_base)
-    return r.json()
+    
+    
 
 
-print(url_base)
+print(VPN)

@@ -1,0 +1,12 @@
+[workspace]
+restore_data_on_startup = True
+save_data_on_exit = True
+save_history = True
+save_non_project_files = False
+project_type = 'empty-project-type'
+recent_files = ['../../../../../home/reisvmr/.config/spyder-py3/temp.py', 'BOMB-TELEGRAM/TELEGRAM-BOT/EstudoJsonBITCOIN.py', 'BOMB-TELEGRAM/TELEGRAM-BOT/EstudoJsonCEP.py', 'BOMB-TELEGRAM/TELEGRAM-BOT/EstudoPoo.py', 'BOMB-TELEGRAM/TELEGRAM-BOT/Api_Zabbix_PaloAlto copy.py']
+
+[main]
+version = 0.2.0
+recent_files = []
+

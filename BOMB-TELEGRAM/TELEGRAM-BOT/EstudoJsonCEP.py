@@ -25,3 +25,5 @@ d = {
 
 
 d_json = json.dumps(d)
+
+print (d_json)
