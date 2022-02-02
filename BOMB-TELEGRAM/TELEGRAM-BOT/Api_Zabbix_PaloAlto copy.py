@@ -9,6 +9,7 @@ pip install urllib3
 """
 #######Importando Bibliotecas##################
 import requests
+import time
 import json
 import urllib3
 import xmltodict
@@ -18,29 +19,25 @@ urllib3.disable_warnings()
 #################################################
 ###########          Metodo Post       ########## 
 ############ Declarando as Variaveis ############
-IP = '10.32.208.101'
-chave = 'LUFRPT1idTV0YWlYbHd5ekozRjNOeE1kVnBHbC9lNUE9eTlGWXNncjJSekRpWE1MZ3hHcDVZYkhka3R5ZmoxSjZDV2RHTWxtOWtTUT0='
-categoriaurl = 'https://10.32.208.101/api/?type=report&async=yes&reporttype=predefined&reportname=top-url-categories&'
-type = 'op'
-query = '<show><global-protect-portal><current-user><portal>GP-DECEA</portal></current-user></global-protect-portal></show>'
 #Payload contem todos os parametros que seram utilizados no post em forma de dicionario
 
-#'key' : chave}
-#
-#
-#xml para a variavel response
-#requests.get(categoriaurl, params=payload, verify=False)
-#resultado xml to dict
-#odict.parse(response.text)
-#esultado para json
-#dumps(xpars)
-#resultado
-#
+while True:
+    # Variveis
+    url = 'https://10.32.208.101/api/'
+    token = 'LUFRPT1idTV0YWlYbHd5ekozRjNOeE1kVnBHbC9lNUE9eTlGWXNncjJSekRpWE1MZ3hHcDVZYkhka3R5ZmoxSjZDV2RHTWxtOWtTUT0='
+    type = 'op'
+    tunel = '<show><vpn><flow><tunnel-id>6</tunnel-id></flow></vpn></show>'
+    vpn = '<show><global-protect-portal><current-user><portal>GP-DECEAGP-GATEWAYGP-DECEA</portal></current-user></global-protect-portal></show>'
+    #Payload contem todos os parametros que seram utilizados no post em forma de dicionario
+    payload = { 'key' : token, 'type' : type, 'cmd' : tunel}
+    # Ler mensagens
+    response = requests.get(url, params=payload, verify=False)
+    #Converter resultado xml to dict
+    xpars = xmltodict.parse(response.text)
+    #Converter resultado para json
+    json = json.dumps(xpars)
+    #Imprimindo resultado
+    print (json)
+    time.sleep (300)
+    
 
-def get_resquest(type=type,cmd=query,key=chave)
-    url_base = f'https://10.32.208.101/api/?type={type}&cmd={cmd}&key={key}'
-    r = requests.get(url_base)
-    return r.json()
-
-
-print(url_base)

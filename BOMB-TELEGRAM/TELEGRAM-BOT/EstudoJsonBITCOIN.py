@@ -10,4 +10,4 @@ def get_ticks(moeda='BTC',metodo='ticker'):
     url_base = f'https://mercadobitcoin.net/{moeda}/{metodo}/'
     r = requests.get(url_base)
     return r.json()
-d = get_ticks()
+d = get_ticks
