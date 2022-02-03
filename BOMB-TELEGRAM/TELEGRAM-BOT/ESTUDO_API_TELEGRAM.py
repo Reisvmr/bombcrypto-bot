@@ -7,6 +7,7 @@ Created on Thu Jan 27 14:48:24 2022
 
 import requests
 import time
+import json
 #r = requests.post(URL_TELEGRAM_BASE + "/getUpdate")
 #
 #resposta_dict = r.json()
@@ -18,6 +19,17 @@ import time
 #payload = { 'token' : chave}
 # Capturando mensagen no chat
 
+class TelegramBot:
+    
+    def __init__(self):
+        token = '2108042894:AAESUNKSc5INW5ze3s7n-ntTCX3ibYaWgFY'
+        self.url_base = f'https://api.telegram.org/bot{token}/getUpdates'
+        
+    def Iniciar(self):
+        update_id = Nome
+        
+    
+   
 while True:
     # Variveis
     token = '2108042894:AAESUNKSc5INW5ze3s7n-ntTCX3ibYaWgFY'
